@@ -1,0 +1,38 @@
+{
+  "UserAgent": "MobileHub/1.0",
+  "Version": "1.0",
+  "CredentialsProvider": {
+    "CognitoIdentity": {
+      "Default": {
+        "PoolId": "eu-west-2:31a301a2-5586-4db1-a48a-feb86c3880ed",
+        "Region": "eu-west-2"
+      }
+    }
+  },
+  "IdentityManager": {
+    "Default": {}
+  },
+  "CognitoUserPool": {
+    "Default": {
+      "PoolId": "eu-west-2_yuIanaDCh",
+      "AppClientId": "56mtqjuq6rk3bs3tt2apdodhg9",
+      "AppClientSecret": "1h697jvjh4gh1jptbc3epksq4n3cjhnl2h0g9oue4ctkhg12m7nq",
+      "Region": "eu-west-2"
+    }
+  },
+  "PinpointAnalytics": {
+    "Default": {
+      "AppId": "5043b288f04c4dbb949b4b0f9b10a69f",
+      "Region": "us-east-1"
+    }
+  },
+  "PinpointTargeting": {
+    "Default": {
+      "Region": "us-east-1"
+    }
+  },
+"S3TransferUtility": {
+        "Default": {
+            "Bucket": "groovingaudio",
+            "Region": "london"
+}

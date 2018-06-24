@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/wall"
+        android:icon="@drawable/wall"
+        android:title="Bacheca" />
+
+    <item
+        android:id="@+id/record"
+        android:icon="@drawable/record"
+        android:title="Registra groove" />
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/notifications"
+        android:title="Notifiche" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profilo" />
+
+</menu>

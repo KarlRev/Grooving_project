@@ -1,0 +1,5 @@
+The Android emulator does not support record function. To test the application please insert some .wav files to your External SD/Music folder. If you don't have a .wav file, please feel free to use the.wav files created by me in TryMe folder. To test the application, in the Insert Groove Activity, make sure to use the name of a .wav file uploaded to your SD/Music folder without .wav extension.
+
+
+Example:
+Dai un nome al tuo groove: MetalizeMe 
