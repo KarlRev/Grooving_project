@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -46,7 +47,7 @@ public class Inserisci_groove extends AppCompatActivity {
     String categoria_groove;
     String strumenti;
     String email;
-    String url = "http://192.168.1.9:5000/upload";
+    String url = "http://18.191.156.47:8080/upload";
     File audio;
 
     @Override
@@ -116,6 +117,8 @@ public class Inserisci_groove extends AppCompatActivity {
                         return params;
                     }
                 };
+                stringRequest.setRetryPolicy(new DefaultRetryPolicy( 50000, 5, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
                 RequestQueue requestQueue = Volley.newRequestQueue(Inserisci_groove.this);
                 requestQueue.add(stringRequest);
             }

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -41,7 +42,7 @@ import java.util.Map;
 public class Authentication extends AppCompatActivity {
     String email;
     String password;
-    String url = "http://192.168.1.9:5000/login";
+    String url = "http://18.191.156.47:8080/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +103,7 @@ public class Authentication extends AppCompatActivity {
                             @Override
                             // Handles errors that occur due to Volley
                             public void onErrorResponse(VolleyError error) {
-                                Log.e("Volley", "Error");
+                                Log.d("Volley", error.toString());
                             }
                         }
                 ){
@@ -114,6 +115,9 @@ public class Authentication extends AppCompatActivity {
                         return params;
                     }
                 };
+
+                request.setRetryPolicy(new DefaultRetryPolicy( 50000, 5, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
                 RequestQueue requestQueue = Volley.newRequestQueue(Authentication.this);
                 requestQueue.add(request);
             }

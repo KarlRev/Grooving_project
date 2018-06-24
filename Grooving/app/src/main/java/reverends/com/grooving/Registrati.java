@@ -41,7 +41,7 @@ public class Registrati extends AppCompatActivity {
     String email;
     String password;
     String username;
-    String url = " http://192.168.1.9:5000/register";
+    String url = " http://18.191.156.47:8080/register";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
