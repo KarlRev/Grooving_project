@@ -42,7 +42,7 @@ import java.util.Map;
 public class Authentication extends AppCompatActivity {
     String email;
     String password;
-    String url = "http://18.191.156.47:8080/login";
+    String url = "http://52.15.100.48:8080/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

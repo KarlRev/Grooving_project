@@ -1,0 +1,553 @@
+html, body{height:100%; width:100%; position:fixed; top:0; left:0; bottom:0; right:0;}
+body{background: #808080;}
+
+/***********************************
+
+Codice per il banner superiore home
+
+***********************************/
+
+.header{background-color: #000000;
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    z-index: 1;
+}
+
+.header_menu{float:right; margin:0; padding:0;}
+
+.header_menu_item {color: white; display: inline-block;  padding:10px;}
+
+.header_menu_item a{
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    text-decoration: none; color:white;
+}
+
+.header_menu_item a:hover{color: #ff4500;}
+
+
+
+
+/*****************************************
+
+Codice per il logo di sinistra (Logo) home
+
+*****************************************/
+
+.image_section {height:100%; width:50%; position: fixed; left:0;
+                background-image: url("/static/grooving_logo.png");
+                background-size: cover;
+                -o-background-size: cover;
+                -moz-background-size: cover;
+                z-index: 1;}
+
+
+
+
+/************************************************
+
+Codice per il form di destra (Login) home
+
+*************************************************/
+
+.login_section{
+    height:100%;
+    width:50%;
+    left:50%;
+    position:fixed;
+    background-color: #000000;
+    z-index: 0;}
+
+.login_section_div{
+    position:relative;
+    left:25%;
+    top:10%;
+    background-color: #ff4500;
+    height:75%;
+    width:50%;
+    border:1px solid silver;}
+
+.form{
+    position:absolute;
+}
+
+
+.login_section_element{padding: 10px; position: relative; width:50%; left:10%;}
+
+
+a{position:relative;
+    color: #FFFFFF;
+    left:5%;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+
+.flash {
+    position:relative;
+    left:15px;
+    top:-30px;
+    color: #0000ff;
+    padding: 20px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size:16px;
+}
+
+
+.register_section_element{padding: 10px; position: relative; width:50%; left:10%;}
+
+
+
+/*************************************************
+
+Codice per la bacheca
+
+**************************************************/
+
+.bacheca_container{
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:39px;
+    left:0;
+    background-color: #4682b4;
+}
+
+.bacheca {
+    width:70%;
+    height:90%;
+    margin:auto;
+    position:absolute;
+    left:0;
+    right:0;
+    padding:20px;
+    background-color: #ff4500;
+    box-shadow: 0 0 50px 20px #000000;
+    opacity:0.8;
+    overflow: scroll;
+}
+
+.bacheca_item {
+    width:100%;
+    height:200px;
+    margin-bottom: 30px;
+    padding:20px;
+    box-sizing: border-box;
+    border: #000000 2px solid;
+    position:relative;
+    display:block;
+    border-radius:20px;
+    background-color: #ffa500;
+    box-shadow: inset 0 0 10px white;
+
+}
+
+.item_image{
+    height:50px;
+    width: 50px;
+    border: 1px solid;
+    position:absolute;
+    top:55px;
+    left:30px;
+    background: url("grooving_logo.png") no-repeat;
+    background-size: contain;
+
+}
+
+h1 {
+    position:absolute;
+    left:100px;
+    top:45px;
+    font-size: 30px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+h2{
+    position:absolute;
+    top:120px;
+    left:30px;
+    font-size: 25px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+p{
+    position:absolute;
+    left:300px;
+    top:30px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 25px;
+}
+
+audio{
+    margin-top: 30px;
+    position:absolute;
+    top:50px;
+    left:-10px;
+}
+
+
+.visualizza_commenti{
+    position:absolute;
+    top:10px;
+    left:700px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #0000ff;
+}
+
+.visualizza_commenti:hover{
+    color: #ff4500;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.inserisci_commento{
+    position:absolute;
+    top:60px;
+    left:700px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #0000ff;
+}
+
+.inserisci_commento:hover{
+    color: #ff4500;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.suggerisci{
+    position:absolute;
+    top:110px;
+    left:700px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #0000ff;
+}
+
+.suggerisci:hover{
+    color: #ff4500;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.visualizza_suggeriti{
+    position:absolute;
+    top:160px;
+    left:700px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #0000ff;
+}
+
+.visualizza_suggeriti:hover{
+    color: #ff4500;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.nessun_groove{
+    position:absolute;
+    top:150px;
+    left:300px;
+    color: white;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+
+/*****************************************************
+
+Codice per visualizzare i commenti
+
+******************************************************/
+
+.lista_commenti_container{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:39px;
+    left:0;
+    background: rgba(2,70,88,0.9);
+    transition: all 500ms ease;
+}
+
+.lista_commenti{
+    width:350px;
+    height:400px;
+    margin:auto;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #ff8c00;
+    border:2px solid blue;
+    padding:20px;
+    box-shadow: 0 0 50px 5px #000000;
+    overflow:scroll;
+}
+
+.lista_commenti_item {
+    width: 100%;
+    height:160px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: orangered 2px solid;
+    position: relative;
+    display: block;
+}
+
+.commento_singolo{
+    position:absolute;
+    left:0;
+    top:40px;
+    background-color: #FFFFFF;
+    border: 2px solid silver;
+    font-size: 14px;
+    border-radius: 20px;
+    padding:10px;
+}
+
+.autore_commento{
+    position:absolute;
+    top:-10px;
+    left:0;
+}
+
+
+
+
+/******************************************************
+
+Codice per il popup di inserimento commento
+
+*******************************************************/
+
+.modal_container{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:39px;
+    left:0;
+    background: rgba(2,70,88,0.99);
+    transition: all 500ms ease;
+}
+
+.modal{
+    width:350px;
+    height:400px;
+    margin:auto;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #ff8c00;
+    border:2px solid blue;
+    padding:20px;
+    box-shadow: 0 0 50px 5px #000000;
+}
+
+.modal_heading{
+    width:100%;
+    display:block;
+    height:60px;
+    margin-bottom:30px;
+    color: #000000;
+    padding:10px;
+    box-sizing: border-box;
+    text-align:center;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 20px;
+    border-bottom: 2px solid #000000;
+}
+
+    textarea{
+    margin-bottom: 15px;
+    padding:10px;
+    width:100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height:120px;
+    border:0;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 15px;
+}
+
+.button_send{
+    margin-bottom: 15px;
+    padding:10px;
+    width:100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color:#ffffff;
+    border:0;
+    font-size: 20px;
+    margin-top:10px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+.button_send:hover{
+    cursor:pointer;
+}
+
+
+.close{
+    color:#ffffff;
+    position:absolute;
+    border:2px solid #ff0000;
+    padding:7px 9px 11px 9px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    background: #000000;
+    text-decoration: none;
+    border-radius:50%;
+    box-sizing: border-box;
+    top:0;
+    left:340px;
+
+    transition:background 500ms;
+}
+
+.close:hover{
+    cursor:pointer;
+}
+
+.error_post_request{
+    position:relative;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 20px;
+    left:20px;
+    top:0;
+}
+
+.login_required{
+    position:absolute;
+    top:80px;
+    left:20px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 20px;
+}
+
+.redirect_for_home{
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    position:absolute;
+    text-align: center;
+    top:150px;
+    left:150px;
+    padding:10px;
+}
+
+.redirect_for_home:hover{
+    color: orangered;
+    cursor:pointer;
+}
+
+/*********************************************************
+
+Codice per il form di suggerimento groove
+
+*********************************************************/
+
+.miei_groove_container{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:39px;
+    left:0;
+    background: rgba(2,70,88,0.99);
+    transition: all 500ms ease;
+}
+
+.miei_groove{
+    width:350px;
+    height:400px;
+    margin:auto;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #ff8c00;
+    border:2px solid blue;
+    padding:20px;
+    box-shadow: 0 0 50px 5px #000000;
+    overflow:scroll;
+}
+
+.miei_groove_item {
+    width: 100%;
+    height:160px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: orangered 2px solid;
+    position: relative;
+    display: block;
+}
+
+.suggerisci_groove_nomegroove{
+    position:absolute;
+    top:-10px;
+    left:0;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 25px;
+}
+
+.suggerisci_groove_caratteristiche{
+    position: absolute;
+    left:210px;
+    top:-20px;
+}
+
+.suggerisci_groove_audio{
+    position:absolute;
+    top:70px;
+    left:-170px;
+
+}
+
+.suggerisci_groove_inviasuggerimento{
+    position:absolute;
+    top: 70px;
+    left:0;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 15px;
+    color: #0000ff;
+    text-decoration: none;
+    border:none;
+    outline:none;
+    background:none;
+    cursor:pointer;
+    padding:0;
+}
+
+.suggerisci_groove_inviasuggerimento:hover{
+    cursor: pointer;
+    color: #ff4500;
+}
+
+.error_suggest_request{
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    position:absolute;
+    top:-10px;
+    left:10px;
+    font-size: 16px;
+    color:#0000ff;
+}
+
+.vuoto{
+    position:absolute;
+    top:0;
+    left:10px;
+    color: white;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size:20px;
+}

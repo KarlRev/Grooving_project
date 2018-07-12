@@ -1,0 +1,28 @@
+{% extends 'home.xhtml' %}
+{% block page %}
+    <div class="bacheca_container">
+        <div class="bacheca">
+            {% for groove in grooves %}
+                <div class="bacheca_item">
+                    <div class="item_image"></div>
+                    <h1> {{ groove['Autore'] }}</h1>
+                    <h2>{{ groove['Nome_groove'] }}</h2>
+                    <p>
+                        <span> {{ groove['Categoria'] }} <br/>{{ groove['Strumenti'] }}</span>
+                        <br/>
+                        <audio controls="controls" loop="loop" src="{{ url_for('stream', id_groove=groove['ID'])}}"/>
+                    </p>
+                    <a class="visualizza_commenti" href="{{ url_for('groove_comments', idgroove=groove['ID']) }}"> Visualizza commenti </a>
+                    <a class="inserisci_commento" href="{{ url_for('comment', groove_id=groove['ID']) }}"> Commenta </a>
+                    <a class="suggerisci" href="{{ url_for('suggest', idgroovetosuggest=groove['ID'])}}"> Suggerisci groove</a>
+                    <a class="visualizza_suggeriti" href="{{ url_for('suggestions', idsuggestion = groove['ID']) }}"> Visualizza suggeriti</a>
+                </div>
+            {% endfor %}
+        </div>
+        {% block commento %} {% endblock %}
+        {% block lista_commenti %}{% endblock %}
+        {% block suggerisci_groove %}{% endblock %}
+        {% block visualizza_suggeriti %}{% endblock %}
+    <script src="/static/audio_playing.js"></script>
+    </div>
+{% endblock %}

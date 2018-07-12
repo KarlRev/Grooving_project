@@ -1,0 +1,35 @@
+{% extends 'bacheca.xhtml' %}
+{% block suggerisci_groove %}
+    <div class="miei_groove_container">
+        <div class="miei_groove">
+            {% if g.user %}
+                <button class="close" onclick="window.history.go(-1); return false;" >X</button>
+                {% if grooves %}
+               {% for groove in grooves %}
+            <div class="miei_groove_item">
+                <h1 class="suggerisci_groove_nomegroove">{{ groove['Nome_groove'] }}</h1>
+                <p class="suggerisci_groove_caratteristiche">
+                    <span> {{ groove['Categoria'] }} <br/>{{ groove['Strumenti'] }}</span>
+                    <br/>
+                    <audio class="suggerisci_groove_audio" controls="controls" loop="loop" src="{{ url_for('stream', id_groove=groove['ID'])}}"/>
+                </p>
+                <form method="post">
+                     <button class="suggerisci_groove_inviasuggerimento" name="id_groove_chosen" value="{{ groove['ID'] }}" > Suggerisci questo groove </button>
+                </form>
+            </div>
+            {% endfor %}
+                    {% else %}
+                    <p class="vuoto">Non hai groove da suggerire...</p>
+                    {% endif %}
+                {% for message in get_flashed_messages() %}
+                    <p class="error_suggest_request">{{ message }}</p>
+                {% endfor %}
+            {% else %}
+                <a href="{{ url_for('wall') }}" class="close" >X</a>
+                <span class="modal_heading"> OOOPS... </span>
+                <p class="login_required"> Non puoi suggerire un groove se non sei loggato</p>
+                <a class="redirect_for_home" href="{{ url_for('home') }}"> Login </a>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

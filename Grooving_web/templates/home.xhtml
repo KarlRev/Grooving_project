@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Grooving Home</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header">
+        <ul class="header_menu">
+            {% if g.user %}
+                <li class="header_menu_item"> <a href="{{ url_for('home') }}">Home</a></li>
+                <li class="header_menu_item"><a href="{{ url_for('mywall') }}">{{ g.user}}</a>  </li>
+                <li class="header_menu_item"> <a href="{{ url_for('logout') }}">Logout</a> </li>
+            {% else %}
+            <li class="header_menu_item"> <a href="{{ url_for('home') }}">Home</a> </li>
+            <li class="header_menu_item"> <a href="{{ url_for('register') }}"> Registrati </a></li>
+            {% endif %}
+        </ul>
+    </header>
+
+    {% block page %}
+        <section class="image_section">
+
+        </section>
+
+        <section class="login_section">
+            <div class="login_section_div">
+                {% block form %}
+                <form method="post" class="login_section_form">
+                    <br/><br/>
+                    <input class="login_section_element" type="email" name="email" placeholder="Inserisci la tua e-mail"/>
+                    <br/><br/>
+                    <input class="login_section_element" type="password" name="password" placeholder="Password"/>
+                    <br/><br/>
+                    <input class="login_section_element" type="submit" name="" value="Login"/><br/><br/>
+                    {% endblock %}
+                    {% for message in get_flashed_messages() %}
+                    <p class="flash">{{ message }}</p>
+                    {% endfor %}
+
+                </form>
+            </div>
+        </section>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'bacheca.xhtml' %}
+{% block lista_commenti%}
+    <div class="lista_commenti_container">
+        <div class="lista_commenti">
+
+            {% if g.user %}
+                <button class="close" onclick="window.history.go(-1); return false;" >X</button>
+                {% if commenti %}
+                {% for commento in commenti %}
+                <div class="lista_commenti_item">
+                    <h2 class="autore_commento"> {{ commento['Autore'] }}</h2>
+                    <p class="commento_singolo">{{ commento['Commento'] }}</p>
+                </div>
+            {% endfor %}
+                {% else %}
+                    <p class="vuoto">Non ci sono commenti...</p>
+                {% endif %}
+
+            {% else %}
+                 <a href="{{ url_for('wall') }}" class="close" >X</a>
+                <span class="modal_heading"> OOOPS... </span>
+                <p class="login_required"> Non puoi vedere i commenti se non sei loggato</p>
+                <a class="redirect_for_home" href="{{ url_for('home') }}"> Login </a>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

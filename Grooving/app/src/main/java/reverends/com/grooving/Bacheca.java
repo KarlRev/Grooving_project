@@ -35,8 +35,8 @@ import static reverends.com.grooving.MainActivity.player;
 public class Bacheca extends Fragment {
     View v;
     ArrayList<Groove> grooves = new ArrayList<Groove>();
-    String url = "http://18.191.156.47:8080/wall";
-    String url_streaming = "http://18.191.156.47:8080/requeststream";
+    String url = "http://52.15.100.48:8080/wall";
+    String url_streaming = "http://52.15.100.48:8080/requeststream";
 
     @Nullable
     @Override

@@ -47,7 +47,7 @@ public class Inserisci_groove extends AppCompatActivity {
     String categoria_groove;
     String strumenti;
     String email;
-    String url = "http://18.191.156.47:8080/upload";
+    String url = "http://52.15.100.48:8080/upload";
     File audio;
 
     @Override

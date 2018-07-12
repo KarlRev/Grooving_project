@@ -1,0 +1,25 @@
+{% extends 'bacheca.xhtml' %}
+{% block commento %}
+    <div class="modal_container">
+        <div class="modal">
+            {% if g.user %}
+                <button class="close" onclick="window.history.go(-1); return false;" >X</button>
+                <span class="modal_heading"> Inserisci commento </span>
+                <form method="post">
+                    <textarea name="comment_text" rows="30" cols="30"> </textarea>
+                    <br/><br/>
+                    <input class="button_send" name="" type="submit" value="Invia"/>
+                    <br/><br/>
+                </form>
+                {% for message in get_flashed_messages() %}
+                    <p class="error_post_request">{{ message }}</p>
+                {% endfor %}
+            {% else %}
+                <a href="{{ url_for('wall') }}" class="close" >X</a>
+                <span class="modal_heading"> OOOPS... </span>
+                <p class="login_required"> Non puoi commentare se non sei loggato</p>
+                <a class="redirect_for_home" href="{{ url_for('home') }}"> Login </a>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

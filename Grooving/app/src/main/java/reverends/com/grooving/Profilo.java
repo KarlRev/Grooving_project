@@ -41,9 +41,9 @@ import static reverends.com.grooving.MainActivity.player;
 
 public class Profilo extends Fragment {
     View v;
-    String url="http://18.191.156.47:8080/logout";
-    String get_my_grooves="http://18.191.156.47:8080/my_grooves";
-    String stream="http://18.191.156.47:8080/requeststream";
+    String url="http://52.15.100.48:8080/logout";
+    String get_my_grooves="http://52.15.100.48:8080/my_grooves";
+    String stream="http://52.15.100.48:8080/requeststream";
     ArrayList<Groove> grooves = new ArrayList<Groove>();
     String email;
     String autore_groove;
